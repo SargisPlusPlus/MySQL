@@ -1,6 +1,3 @@
-Azret Missirov 29512170
-Sargis Dudaklyan 38671346
-
 
 PROJECT #3
 
