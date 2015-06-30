@@ -1,0 +1,70 @@
+TABLE_CATALOG	TABLE_SCHEMA	TABLE_NAME	TABLE_TYPE	ENGINE	VERSION	ROW_FORMAT	TABLE_ROWS	AVG_ROW_LENGTH	DATA_LENGTH	MAX_DATA_LENGTH	INDEX_LENGTH	DATA_FREE	AUTO_INCREMENT	CREATE_TIME	UPDATE_TIME	CHECK_TIME	TABLE_COLLATION	CHECKSUM	CREATE_OPTIONS	TABLE_COMMENT
+def	project2_3	AccidentReport	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0	NULL	2014-05-11 19:42:30	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	BorrowPost	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0	NULL	2014-05-11 19:42:31	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Borrower	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0	NULL	2014-05-11 19:42:32	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Car	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	32768	0	NULL	2014-05-11 19:42:31	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	CarCatalog	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0	NULL	2014-05-11 19:42:30	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Deal	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0	NULL	2014-05-11 19:42:31	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Involves	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	32768	0	NULL	2014-05-11 19:42:32	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Involves2	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	32768	0	NULL	2014-05-11 19:42:32	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	LendPost	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	16384	0	NULL	2014-05-11 19:42:32	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Lender	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0	NULL	2014-05-11 19:42:31	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Offer	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	16384	0	NULL	2014-05-11 19:42:31	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	Post	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	16384	0	NULL	2014-05-11 19:42:31	NULL	NULL	latin1_swedish_ci	NULL		
+def	project2_3	User	BASE TABLE	InnoDB	10	Compact	0	0	16384	0	0	0	NULL	2014-05-11 19:42:30	NULL	NULL	latin1_swedish_ci	NULL		
+TABLE_CATALOG	TABLE_SCHEMA	TABLE_NAME	COLUMN_NAME	ORDINAL_POSITION	COLUMN_DEFAULT	IS_NULLABLE	DATA_TYPE	CHARACTER_MAXIMUM_LENGTH	CHARACTER_OCTET_LENGTH	NUMERIC_PRECISION	NUMERIC_SCALE	DATETIME_PRECISION	CHARACTER_SET_NAME	COLLATION_NAME	COLUMN_TYPE	COLUMN_KEY	EXTRA	PRIVILEGES	COLUMN_COMMENT
+def	project2_3	AccidentReport	accident_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	AccidentReport	datetime	2	NULL	YES	date	NULL	NULL	NULL	NULL	NULL	NULL	NULL	date			select,insert,update,references	
+def	project2_3	AccidentReport	severity	3	NULL	YES	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)			select,insert,update,references	
+def	project2_3	AccidentReport	details	4	NULL	YES	varchar	100	100	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(100)			select,insert,update,references	
+def	project2_3	BorrowPost	borrow_post_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	BorrowPost	daily_price_min	2	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	BorrowPost	daily_price_max	3	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	BorrowPost	car_mileage_min	4	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	BorrowPost	car_mileage_max	5	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	BorrowPost	car_category	6	NULL	YES	varchar	50	50	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(50)			select,insert,update,references	
+def	project2_3	Borrower	borrower_user_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Borrower	borrow_count	2	NULL	YES	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)			select,insert,update,references	
+def	project2_3	Borrower	rating	3	NULL	YES	float	NULL	NULL	12	NULL	NULL	NULL	NULL	float			select,insert,update,references	
+def	project2_3	Car	car_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Car	lender_id	2	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	MUL		select,insert,update,references	
+def	project2_3	Car	car_catalog_id	3	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	MUL		select,insert,update,references	
+def	project2_3	CarCatalog	car_catalog_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	CarCatalog	category	2	NULL	YES	varchar	40	40	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(40)			select,insert,update,references	
+def	project2_3	CarCatalog	make	3	NULL	YES	varchar	40	40	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(40)			select,insert,update,references	
+def	project2_3	CarCatalog	model	4	NULL	YES	varchar	40	40	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(40)			select,insert,update,references	
+def	project2_3	CarCatalog	year	5	NULL	YES	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)			select,insert,update,references	
+def	project2_3	CarCatalog	color	6	NULL	YES	varchar	40	40	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(40)			select,insert,update,references	
+def	project2_3	Deal	deal_offer_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Deal	lender_fee	2	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	Deal	borrower_fee	3	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	Deal	lender_rating	4	NULL	YES	float	NULL	NULL	12	NULL	NULL	NULL	NULL	float			select,insert,update,references	
+def	project2_3	Deal	borrower_rating	5	NULL	YES	float	NULL	NULL	12	NULL	NULL	NULL	NULL	float			select,insert,update,references	
+def	project2_3	Involves	involved_offer_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	MUL		select,insert,update,references	
+def	project2_3	Involves	lender_post_id	2	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Involves	borrower_post_id	3	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Involves2	accident_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	MUL		select,insert,update,references	
+def	project2_3	Involves2	driver_id	2	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Involves2	car_id	3	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	LendPost	lender_post_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	LendPost	car_id	2	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	MUL		select,insert,update,references	
+def	project2_3	LendPost	daily_price	3	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	LendPost	car_mileage	4	NULL	YES	double	NULL	NULL	22	NULL	NULL	NULL	NULL	double			select,insert,update,references	
+def	project2_3	Lender	lender_user_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Lender	lend_count	2	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)			select,insert,update,references	
+def	project2_3	Lender	rating	3	NULL	YES	float	NULL	NULL	12	NULL	NULL	NULL	NULL	float			select,insert,update,references	
+def	project2_3	Offer	offer_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Offer	offer_user_id	2	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	MUL		select,insert,update,references	
+def	project2_3	Offer	offer_datetime	3	NULL	YES	date	NULL	NULL	NULL	NULL	NULL	NULL	NULL	date			select,insert,update,references	
+def	project2_3	Offer	lender_accept_datetime	4	NULL	YES	date	NULL	NULL	NULL	NULL	NULL	NULL	NULL	date			select,insert,update,references	
+def	project2_3	Offer	borrower_accept_datetime	5	NULL	YES	date	NULL	NULL	NULL	NULL	NULL	NULL	NULL	date			select,insert,update,references	
+def	project2_3	Post	post_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	Post	posted_user_id	2	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	MUL		select,insert,update,references	
+def	project2_3	Post	pickup_datetime	3	NULL	YES	date	NULL	NULL	NULL	NULL	NULL	NULL	NULL	date			select,insert,update,references	
+def	project2_3	Post	return_datetime	4	NULL	YES	date	NULL	NULL	NULL	NULL	NULL	NULL	NULL	date			select,insert,update,references	
+def	project2_3	Post	pickup_location	5	NULL	YES	varchar	50	50	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(50)			select,insert,update,references	
+def	project2_3	Post	return_location	6	NULL	YES	varchar	40	40	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(40)			select,insert,update,references	
+def	project2_3	User	driver_id	1	NULL	NO	int	NULL	NULL	10	0	NULL	NULL	NULL	int(11)	PRI		select,insert,update,references	
+def	project2_3	User	name	2	NULL	YES	varchar	40	40	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(40)			select,insert,update,references	
+def	project2_3	User	email	3	NULL	YES	varchar	40	40	NULL	NULL	NULL	latin1	latin1_swedish_ci	varchar(40)			select,insert,update,references	
+def	project2_3	User	date_of_birth	4	NULL	YES	date	NULL	NULL	NULL	NULL	NULL	NULL	NULL	date			select,insert,update,references	
